@@ -50,7 +50,7 @@ body {
     letter-spacing: 0.03em;
 }
 /* logo */
-.logo-link {
+.logo {
     text-decoration: none;
     font-family: 'Raleway';
     font-style: normal;
@@ -59,45 +59,35 @@ body {
     line-height: 1.2;
     display: inline-block;
 }
-.logo-blue {
+.logo__color-a {
     color: var(--link-hover-color);
 }
-.logo-black {
+.logo__color-b {
     color: #000000;
 }
-.logo-link:focus {
+.logo:focus {
     color: var(--link-hover-color);
 }
 /* навігація */
-.site-nav {
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+.nav {
     display: flex;
     margin-left: 93px; 
     list-style: none;
     padding: 0px;
 }
-/* .site-nav .item {
-    margin-right: 50px;
-}
-.site-nav .item:last-child {
-    margin-right: 0px;
-} */
-/* .site-nav .item:not(last-child) {
-    margin-right: 50px;
-} */
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
 }
-.main-nav {
-    display: flex;
-    align-items: center;
-    
-}
-.site-nav .item + .item {
+
+.nav .nav__item + .nav__item {
     margin-left: 50px;
 }
-
-.site-nav a {
+.nav .nav__link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -113,18 +103,13 @@ body {
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: var(--timing);
+}
+.nav__link:hover,
+.nav__link:focus {
+    color: var(--link-hover-color);
+}
 
-}
-.site-nav a:hover,
-.site-nav a:focus {
-    color: var(--link-hover-color);
-    /* text-decoration: none; */
-    
-}
-.site-nav .current {
-    color: var(--link-hover-color);
-}
-.site-nav .current::after {
+.nav__link--current::after {
     content: "";
     display: block;
 
@@ -136,20 +121,17 @@ body {
     border-radius: 2px;
     background-color: var(--link-hover-color);
     
-
     transition: color var(--animation-speed) var(--timing);
 }
-/* .site-nav a:focus {
-    color:var(--link-hover-color);
-} */
-.site-nav .current::after
-.site-nav a:hover,
-.site-nav a:focus {
+.nav__link--current::after
+.nav__link:hover,
+.nav__link:focus {
     color: var(--link-hover-color);
-    
-    /* text-decoration: none; */
-
 }
+.nav__link--current {
+    color: var(--link-hover-color);
+}
+
 /* contacts */
 ul.contacts {
 color: var(--primary-text-color);
@@ -1027,7 +1009,7 @@ button {
     height: 100%;
 
     background: rgba(33, 150, 243, 0.9);
-    /* backdrop-filter: blur(2px); */
+    
     transition: transform var(--animation-speed);
 }
 .item .overlay-text {
