@@ -20,12 +20,15 @@
     color: #000000;
 }
 
+.logo-white {
+    @include logo__color-b(#ffffff);
+}
 
-//logo footer
+//logo footer   
 
 .bottom-logo {
     margin-bottom: 20px;
 }
-.logo-white {
-    color: #ffffff
-}
+// .logo-white {
+//     color: #ffffff
+// }

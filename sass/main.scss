@@ -1,8 +1,11 @@
 // Utils styles
 @import './utils/var';
+@import './utils/mixin';
+
 // Base styles
 @import "./base/base";
 @import "./base/reset";
+
 // Components styles
 @import "./components/_container";
 @import "./components/_section";
@@ -14,3 +17,12 @@
 @import './components/hero';
 @import './components/modal';
 @import './components/modalform';
+@import './components/page';
+@import './components/activities';
+@import './components/team';
+@import './components/socials';
+@import './components/customers';
+@import './components/footer';
+@import './components/signupform';
+@import './components/portfolio';
+@import './components/_cards';
