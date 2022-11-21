@@ -1,9 +1,16 @@
-header {
-    border-bottom: 94px;
-}
-body {
-    background-color: #ffffff;
-    color: var(--primary-text-color);
-    font-family: Roboto, sans-serif;
-    letter-spacing: 0.03em;
-}
+// Utils styles
+@import './utils/var';
+// Base styles
+@import "./base/base";
+@import "./base/reset";
+// Components styles
+@import "./components/_container";
+@import "./components/_section";
+@import './components/header';
+@import "./components/_buttons";
+@import './components/logo';
+@import './components/navigation';
+@import './components/contact';
+@import './components/hero';
+@import './components/modal';
+@import './components/modalform';
